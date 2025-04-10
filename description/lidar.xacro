@@ -1,19 +1,25 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-
-    <joint name= "laser_joint" type="fixed">
+    <joint name="laser_joint" type="fixed">
         <parent link="chassis"/>
         <child link="laser_frame"/>
-        <origin xyz="0.1 0 0.175" rpy="0 0 0"/>
+        <origin xyz="0.122 0 0.212" rpy="0 0 0"/>
     </joint>
 
     <link name="laser_frame">
-    <visual>
+        <visual>
             <geometry>
                 <cylinder radius="0.05" length="0.04"/>
             </geometry>
-            <material name="red"/>
+            <material name="black"/>
+        </visual>
+        <visual>
+            <origin xyz="0 0 -0.05"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.1"/>
+            </geometry>
+            <material name="black"/>
         </visual>
         <collision>
             <geometry>
@@ -26,8 +32,9 @@
     </link>
 
 
+
     <gazebo reference="laser_frame">
-        <material>Gazebo/Red</material>
+        <material>Gazebo/Black</material>
 
         <sensor name="laser" type="ray">
             <pose> 0 0 0 0 0 0 </pose>
@@ -37,7 +44,6 @@
                 <scan>
                     <horizontal>
                         <samples>360</samples>
-                        <resolution>1</resolution>
                         <min_angle>-3.14</min_angle>
                         <max_angle>3.14</max_angle>
                     </horizontal>
@@ -45,7 +51,6 @@
                 <range>
                     <min>0.3</min>
                     <max>12</max>
-                    <resolution>0.01</resolution>
                 </range>
             </ray>
             <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
