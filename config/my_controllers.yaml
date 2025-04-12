@@ -11,7 +11,7 @@ controller_manager:
 
 diff_cont:
   ros__parameters:
-
+    publish_odom: false
     publish_rate: 50.0
 
     base_frame_id: base_link
@@ -20,9 +20,9 @@ diff_cont:
     right_wheel_names: ['right_wheel_joint']
     wheel_separation: 0.297
     wheel_radius: 0.033
+    odom_frame_id: ""
 
     use_stamped_vel: false
-
     # open_loop: false    
 
     # wheels_per_side: x
