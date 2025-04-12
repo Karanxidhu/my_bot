@@ -69,6 +69,12 @@ def generate_launch_description():
             on_start=[joint_broad_spawner],
         )
     )
+    fake_odom = Node(
+        package='karanxidhu-my_bot',
+        executable='fake_odom_node.py',
+        name='fake_odom_node',
+        output='screen'
+    )
 
 
     # Code for delaying a node (I haven't tested how effective it is)
@@ -94,5 +100,6 @@ def generate_launch_description():
         rsp,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
-        delayed_joint_broad_spawner
+        delayed_joint_broad_spawner,
+        fake_odom
     ])
