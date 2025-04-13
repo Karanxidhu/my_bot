@@ -60,21 +60,21 @@ diff_cont:
     # angular.z.min_acceleration: NAN
     # angular.z.max_jerk: NAN
     # angular.z.min_jerk: NAN
-    linear.x.has_velocity_limits: true
-    linear.x.max_velocity: 0.2  # meters per second, lower = slower
-    linear.x.min_velocity: -0.2
+    # linear.x.has_velocity_limits: true
+    # linear.x.max_velocity: 0.2  # meters per second, lower = slower
+    # linear.x.min_velocity: -0.2
 
-    angular.z.has_velocity_limits: true
-    angular.z.max_velocity: 0.5  # radians per second
-    angular.z.min_velocity: -0.5
+    # angular.z.has_velocity_limits: true
+    # angular.z.max_velocity: 0.5  # radians per second
+    # angular.z.min_velocity: -0.5
 
-    linear.x.has_acceleration_limits: true
-    linear.x.max_acceleration: 0.3
-    linear.x.min_acceleration: -0.3
+    # linear.x.has_acceleration_limits: true
+    # linear.x.max_acceleration: 0.3
+    # linear.x.min_acceleration: -0.3
 
-    angular.z.has_acceleration_limits: true
-    angular.z.max_acceleration: 0.5
-    angular.z.min_acceleration: -0.5
+    # angular.z.has_acceleration_limits: true
+    # angular.z.max_acceleration: 0.5
+    # angular.z.min_acceleration: -0.5
 
 
 
